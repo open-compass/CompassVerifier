@@ -1,10 +1,8 @@
 <h1 align="center">
     CompassVerifier: A Unified and Robust Verifier for Large Language Models
 </h1>
+
 <p align="center">
-<!-- <a href="https://spdx.org/licenses/CC-BY-NC-ND-4.0.html">
-    <img alt="License: CC-BY-NC-ND-4.0" src="https://img.shields.io/badge/License-CC_BY_NC_ND_4.0-brightgreen.svg">
-</a> -->
 <a href="">
     <img alt="Arixiv Report" src="https://img.shields.io/badge/Arixiv-Report-blueviolet">
 </a>
@@ -45,7 +43,7 @@ Pick a suitable model from the following table and download the model checkpoint
 
 </div>
 
-## How to use:
+## 🚀 How to use:
 
 ```bash
 git clone https://github.com/OpenCompass/CompassVerifier.git
@@ -140,19 +138,13 @@ processed_judgment: C
 ****************************************************************************************************
 ```
 
-<!-- 输出只会为 A/B/C
-1. A: 正确
-2. B：错误
-3. C：题目 or 回复  or 答案 有严重质量问题 (如问题有歧义不全，答案不全或者模型回复截断 repeat 等）
-目前版本可以暂时把 B， C 都作为错误标签 -->
-
 The output will only be A/B/C.
 
 1. A: correct
 2. B: incorrect
 3. C: the question or the response or the answer has serious quality problems (such as the question has ambiguity and is incomplete, the answer is incomplete or the model response is truncated and repeated, etc.)
 
-⚠️ Currently, you can treat B and C as incorrect labels.
+> ⚠️ **Currently, you can treat both B and C as incorrect labels.**
 
 
 

@@ -21,7 +21,7 @@
   <img src="./assets/model_compare.png" alt="Test Set Results" width="600" height="400">
 </p>
 
-## Get the model and dataset from 🤗:
+## Get the model and dataset from 🤗
 
 Pick a suitable model from the following table and download the model checkpoint.
 
@@ -43,7 +43,7 @@ Pick a suitable model from the following table and download the model checkpoint
 
 </div>
 
-## 🚀 How to use:
+## 🚀 How to use
 
 ```bash
 git clone https://github.com/OpenCompass/CompassVerifier.git
@@ -96,6 +96,7 @@ def process_judgment(judgment_str: str) -> str:
             return matches[-1]
         return ""
 
+# You can change the model name to "opencompass/CompassVerifier-7B" or "opencompass/CompassVerifier-32B"
 model_name = "opencompass/CompassVerifier-3B"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
@@ -239,10 +240,10 @@ We also test the performance of CompassVerifier on [VerifyBench](https://arxiv.o
 | CompassVerifier-32B       | 89.7                     | 81.1                    | 86.8                  | 74.3                 |
 
 
-## ✏️ **Citation**
+## ✏️ Citation
 ```
 @article{CompassVerifier,
-      title={CompassVerifier: A Unified and Robust Verifier for Large Language Models}, 
+      title={{CompassVerifier: A Unified and Robust Verifier for Large Language Models}}, 
       author={Shudong Liu and Hongwei Liu and Junnan Liu and Linchen Xiao and Songyang Gao and Chengqi Lyu and Yuzhe Gu and Wenwei Zhang and Derek F. Wong and Songyang Zhang and Kai Chen},
       year={2025},
 }

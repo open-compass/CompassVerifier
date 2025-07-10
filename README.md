@@ -240,6 +240,10 @@ We also test the performance of CompassVerifier on [VerifyBench](https://arxiv.o
 | CompassVerifier-32B       | 89.7                     | 81.1                    | 86.8                  | 74.3                 |
 
 
+> ⚠️ **Note:**
+> When using the VerifyBench Prompt, xVerify and Tencent-Qwen2.5-7B-RLVR will not output the corresponding judgment in the format specified by the instruction, so the scores are "-".
+
+
 ## ✏️ Citation
 ```
 @article{CompassVerifier,

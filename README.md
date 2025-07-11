@@ -493,11 +493,11 @@ We also test the performance of CompassVerifier on [VerifyBench](https://arxiv.o
 | Qwen2.5-32B-Instruct      | 78.8                     | 58.9                    | 72.0                  | 55.8                 |
 | Qwen2.5-72B-Instruct      | 78.5                     | 61.7                    | 63.0                  | 50.0                 |
 | DeepSeek-V3               | 81.8                     | 62.2                    | 78.6                  | 60.9                 |
-| xVerify-0.5B-I            | 77.9                     | 66.2                    | -                    | -                   |
-| xVerify-8B-I              | 83.2                     | 70.7                    | -                    | -                   |
-| xVerify-9B-C              | 83.2                     | 71.0                    | -                    | -                   |
-| Tencent-Qwen2.5-7B-RLVR   | 82.4                     | 68.9                    | -                    | -                   |
-| CompassVerifier-3B        | 87.4                     | 77.4                    | -                   | -                  |
+| xVerify-0.5B-I            | 77.9                     | 66.2                    | -                     | -                    |
+| xVerify-8B-I              | 83.2                     | 70.7                    | -                     | -                    |
+| xVerify-9B-C              | 83.2                     | 71.0                    | -                     | -                    |
+| Tencent-Qwen2.5-7B-RLVR   | 82.4                     | 68.9                    | -                     | -                    |
+| CompassVerifier-3B        | 87.4                     | 77.4                    | 86.2                  | 75.00                |
 | CompassVerifier-7B        | 88.1                     | 79.0                    | 86.0                  | 73.3                 |
 | CompassVerifier-32B       | 89.7                     | 81.1                    | 86.8                  | 74.3                 |
 
@@ -520,8 +520,8 @@ To validate the efficacy of CompassVerifier as a reward model in reinforcement l
 | Tencent-RLVR | 17.4 | 16.2 | 80.5 |
 | Qwen3-14B | 19.8 | 16.6 | 81.2 |
 | Qwen2.5-32B | 19.6 | 15.4 | 81.6 |
-| CompassVerifier-7B (Qwen2.5) | 21.2 | 17.3 | 82.2 |
-| CompassVerifier-32B (Qwen2.5) | 21.2 | 17.2 | 83.3 |
+| CompassVerifier-7B (Qwen2.5) | 21.2 | **17.3** | 82.2 |
+| CompassVerifier-32B (Qwen2.5) | **21.2** | 17.2 | **83.3** |
 
 
 ## ✏️ Citation

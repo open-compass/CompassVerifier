@@ -2,14 +2,26 @@
     CompassVerifier: A Unified and Robust Verifier for Large Language Models
 </h1>
 
-<p align="center">
-<a href="">
-    <img alt="Arixiv Report" src="https://img.shields.io/badge/Arixiv-Report-blueviolet">
-</a>
-<a href="https://huggingface.co/collections/opencompass/compassverifier-686e5a25e8672e603b17c666">
-    <img alt="Huggingface" src="https://img.shields.io/badge/🤗_Huggingface-Models-ff9800.svg">
-</a>
-</p>
+<div align="center" style="line-height: 1;">
+  <a href="https://github.com/open-compass/CompassVerifier" target="_blank" style="margin: 2px;">
+    <img alt="GitHub Repository" src="https://img.shields.io/badge/GitHub-Repository-blue?color=1991ff&logo=github&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+  <a href="https://open-compass.github.io/CompassVerifier" target="_blank" style="margin: 2px;">
+    <img alt="CompassVerifier Homepage" src="https://img.shields.io/badge/CompassVerifier-Website-orange?color=ff6b35&logo=web&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+  <a href="" target="_blank" style="margin: 2px;">
+    <img alt="Technical Report" src="https://img.shields.io/badge/Paper-Report-brightgreen?logo=arxiv&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+  <a href="https://huggingface.co/collections/opencompass/compassverifier-686e5a25e8672e603b17c666" target="_blank" style="margin: 2px;">
+      <img alt="Hugging Face Models" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-536af5?color=536af5&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+  <a href="https://huggingface.co/datasets/opencompass/VerifierBench" target="_blank" style="margin: 2px;">
+      <img alt="Hugging Face Dataset" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-ff9800?color=ff9800&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/" style="margin: 2px;">
+      <img alt="License" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-f5de53?color=f5de53&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+</div>
 
 
 ## 📖 Introduction
@@ -485,6 +497,7 @@ We also test the performance of CompassVerifier on [VerifyBench](https://arxiv.o
 | xVerify-8B-I              | 83.2                     | 70.7                    | -                    | -                   |
 | xVerify-9B-C              | 83.2                     | 71.0                    | -                    | -                   |
 | Tencent-Qwen2.5-7B-RLVR   | 82.4                     | 68.9                    | -                    | -                   |
+| CompassVerifier-3B        | 87.4                     | 77.4                    | -                   | -                  |
 | CompassVerifier-7B        | 88.1                     | 79.0                    | 86.0                  | 73.3                 |
 | CompassVerifier-32B       | 89.7                     | 81.1                    | 86.8                  | 74.3                 |
 

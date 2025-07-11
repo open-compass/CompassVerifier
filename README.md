@@ -422,7 +422,7 @@ CompassVerifier-qwen3-32B	89.6	92.3	79.8	83.0	86.19 -->
     <td colspan="6" style="text-align: center;"><strong><em>CompassVerifier (Qwen3)</em></strong></td>
   </tr>
   <tr>
-    <td style="text-align: left;">├─ CompassVerifier-1.7B</td>
+    <td style="text-align: left;">CompassVerifier-1.7B</td>
     <td style="text-align: right;">87.1</td>
     <td style="text-align: right;">89.4</td>
     <td style="text-align: right;">63.0</td>
@@ -430,7 +430,7 @@ CompassVerifier-qwen3-32B	89.6	92.3	79.8	83.0	86.19 -->
     <td style="text-align: right;">80.0</td>
   </tr>
   <tr>
-    <td style="text-align: left;">├─ CompassVerifier-8B</td>
+    <td style="text-align: left;">CompassVerifier-8B</td>
     <td style="text-align: right;">86.7</td>
     <td style="text-align: right;">90.7</td>
     <td style="text-align: right;">75.7</td>
@@ -438,7 +438,7 @@ CompassVerifier-qwen3-32B	89.6	92.3	79.8	83.0	86.19 -->
     <td style="text-align: right;">83.1</td>
   </tr>
   <tr>
-    <td style="text-align: left;">├─ CompassVerifier-14B</td>
+    <td style="text-align: left;">CompassVerifier-14B</td>
     <td style="text-align: right;">90.3</td>
     <td style="text-align: right;">91.4</td>
     <td style="text-align: right;">79.1</td>
@@ -446,7 +446,7 @@ CompassVerifier-qwen3-32B	89.6	92.3	79.8	83.0	86.19 -->
     <td style="text-align: right;">85.9</td>
   </tr>
   <tr>
-    <td style="text-align: left;">└─ CompassVerifier-32B</td>
+    <td style="text-align: left;">CompassVerifier-32B</td>
     <td style="text-align: right;">89.6</td>
     <td style="text-align: right;">92.3</td>
     <td style="text-align: right;">79.8</td>
@@ -457,7 +457,7 @@ CompassVerifier-qwen3-32B	89.6	92.3	79.8	83.0	86.19 -->
     <td colspan="6" style="text-align: center;"><strong><em>CompassVerifier (Qwen2.5)</em></strong></td>
   </tr>
   <tr>
-    <td style="text-align: left;">├─ CompassVerifier-3B</td>
+    <td style="text-align: left;">CompassVerifier-3B</td>
     <td style="text-align: right;">85.9</td>
     <td style="text-align: right;">87.7</td>
     <td style="text-align: right;">71.0</td>
@@ -465,7 +465,7 @@ CompassVerifier-qwen3-32B	89.6	92.3	79.8	83.0	86.19 -->
     <td style="text-align: right;">80.4</td>
   </tr>
   <tr>
-    <td style="text-align: left;">├─ CompassVerifier-7B</td>
+    <td style="text-align: left;">CompassVerifier-7B</td>
     <td style="text-align: right;">87.7</td>
     <td style="text-align: right;">92.6</td>
     <td style="text-align: right;">74.8</td>
@@ -473,7 +473,7 @@ CompassVerifier-qwen3-32B	89.6	92.3	79.8	83.0	86.19 -->
     <td style="text-align: right;">83.4</td>
   </tr>
   <tr>
-    <td style="text-align: left;">└─ CompassVerifier-32B</td>
+    <td style="text-align: left;">CompassVerifier-32B</td>
     <td style="text-align: right;">90.3</td>
     <td style="text-align: right;">94.8</td>
     <td style="text-align: right;">80.8</td>
@@ -487,19 +487,124 @@ CompassVerifier-qwen3-32B	89.6	92.3	79.8	83.0	86.19 -->
 
 We also test the performance of CompassVerifier on [VerifyBench](https://arxiv.org/abs/2505.15801). To test its robustness to different prompt styles, we evaluate it using both model-specific prompts and the standard prompts from VerifyBench. The results are as follows:
 
-| Model                     | Model-specific Prompt Acc | Model-specific Prompt F1 | VerifyBench Prompt Acc | VerifyBench Prompt F1 |
-|---------------------------|--------------------------:|-------------------------:|----------------------:|---------------------:|
-| Qwen2.5-7B-Instruct       | 65.4                     | 39.8                    | 60.9                  | 45.0                 |
-| Qwen2.5-32B-Instruct      | 78.8                     | 58.9                    | 72.0                  | 55.8                 |
-| Qwen2.5-72B-Instruct      | 78.5                     | 61.7                    | 63.0                  | 50.0                 |
-| DeepSeek-V3               | 81.8                     | 62.2                    | 78.6                  | 60.9                 |
-| xVerify-0.5B-I            | 77.9                     | 66.2                    | -                     | -                    |
-| xVerify-8B-I              | 83.2                     | 70.7                    | -                     | -                    |
-| xVerify-9B-C              | 83.2                     | 71.0                    | -                     | -                    |
-| Tencent-Qwen2.5-7B-RLVR   | 82.4                     | 68.9                    | -                     | -                    |
-| CompassVerifier-3B        | 87.4                     | 77.4                    | 86.2                  | 75.00                |
-| CompassVerifier-7B        | 88.1                     | 79.0                    | 86.0                  | 73.3                 |
-| CompassVerifier-32B       | 89.7                     | 81.1                    | 86.8                  | 74.3                 |
+<p align="center">
+<table>
+<thead>
+  <tr>
+    <th style="text-align: left;">Model</th>
+    <th style="text-align: right;">Model-specific<br/>Prompt Acc</th>
+    <th style="text-align: right;">Model-specific<br/>Prompt F1</th>
+    <th style="text-align: right;">VerifyBench<br/>Prompt Acc</th>
+    <th style="text-align: right;">VerifyBench<br/>Prompt F1</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colspan="5" style="text-align: center;"><strong>General Models</strong></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">Qwen2.5-7B-Instruct</td>
+    <td style="text-align: right;">65.4</td>
+    <td style="text-align: right;">39.8</td>
+    <td style="text-align: right;">60.9</td>
+    <td style="text-align: right;">45.0</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">Qwen2.5-32B-Instruct</td>
+    <td style="text-align: right;">78.8</td>
+    <td style="text-align: right;">58.9</td>
+    <td style="text-align: right;">72.0</td>
+    <td style="text-align: right;">55.8</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">Qwen2.5-72B-Instruct</td>
+    <td style="text-align: right;">78.5</td>
+    <td style="text-align: right;">61.7</td>
+    <td style="text-align: right;">63.0</td>
+    <td style="text-align: right;">50.0</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">DeepSeek-V3</td>
+    <td style="text-align: right;">81.8</td>
+    <td style="text-align: right;">62.2</td>
+    <td style="text-align: right;">78.6</td>
+    <td style="text-align: right;">60.9</td>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align: center;"><strong>Verifier Models</strong></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">xVerify-0.5B-I</td>
+    <td style="text-align: right;">77.9</td>
+    <td style="text-align: right;">66.2</td>
+    <td style="text-align: right;">-</td>
+    <td style="text-align: right;">-</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">xVerify-8B-I</td>
+    <td style="text-align: right;">83.2</td>
+    <td style="text-align: right;">70.7</td>
+    <td style="text-align: right;">-</td>
+    <td style="text-align: right;">-</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">xVerify-9B-C</td>
+    <td style="text-align: right;">83.2</td>
+    <td style="text-align: right;">71.0</td>
+    <td style="text-align: right;">-</td>
+    <td style="text-align: right;">-</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">Tencent-Qwen2.5-7B-RLVR</td>
+    <td style="text-align: right;">82.4</td>
+    <td style="text-align: right;">68.9</td>
+    <td style="text-align: right;">-</td>
+    <td style="text-align: right;">-</td>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align: center;"><strong><em>CompassVerifier (Qwen3)</em></strong></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">CompassVerifier-1.7B</td>
+    <td style="text-align: right;">80.1</td>
+    <td style="text-align: right;">69.3</td>
+    <td style="text-align: right;">72.9</td>
+    <td style="text-align: right;">61.0</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">CompassVerifier-8B</td>
+    <td style="text-align: right;">84.5</td>
+    <td style="text-align: right;">72.7</td>
+    <td style="text-align: right;">79.2</td>
+    <td style="text-align: right;">55.4</td>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align: center;"><strong><em>CompassVerifier (Qwen2.5)</em></strong></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">CompassVerifier-3B</td>
+    <td style="text-align: right;">87.4</td>
+    <td style="text-align: right;">77.4</td>
+    <td style="text-align: right;">86.2</td>
+    <td style="text-align: right;">75.0</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">CompassVerifier-7B</td>
+    <td style="text-align: right;">88.1</td>
+    <td style="text-align: right;">79.0</td>
+    <td style="text-align: right;">86.0</td>
+    <td style="text-align: right;">73.3</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">CompassVerifier-32B</td>
+    <td style="text-align: right;">89.7</td>
+    <td style="text-align: right;">81.1</td>
+    <td style="text-align: right;">86.8</td>
+    <td style="text-align: right;">74.3</td>
+  </tr>
+</tbody>
+</table>
+</p>
 
 
 > ⚠️ **Note:**
@@ -510,18 +615,71 @@ We also test the performance of CompassVerifier on [VerifyBench](https://arxiv.o
 
 To validate the efficacy of CompassVerifier as a reward model in reinforcement learning (RL), we utilize GRPO to train Qwen3-4B-Base with rule-based verifier Math-Verify, and model-based verifier as the reward model, with Open-S1 as the RL dataset. We then rigorously evaluate the reasoning capabilities with a metric of the average@32 rollout score. The results are as follows:
 
-| Model | AIME24 | AIME25 | MATH500 |
-|-------|--------|--------|---------|
-| *Original Model Performance* |
-| Qwen3-4B-Base | 2.7 | 1.8 | 34.1 |
-| *RL with Rule-based Verifier* |
-| Math-Verify | 8.9 | 7.2 | 63.1 |
-| *RL with Model-based Verifier* |
-| Tencent-RLVR | 17.4 | 16.2 | 80.5 |
-| Qwen3-14B | 19.8 | 16.6 | 81.2 |
-| Qwen2.5-32B | 19.6 | 15.4 | 81.6 |
-| CompassVerifier-7B (Qwen2.5) | 21.2 | **17.3** | 82.2 |
-| CompassVerifier-32B (Qwen2.5) | **21.2** | 17.2 | **83.3** |
+<p align="center">
+<table>
+<thead>
+  <tr>
+    <th style="text-align: left;">Model</th>
+    <th style="text-align: right;">AIME24</th>
+    <th style="text-align: right;">AIME25</th>
+    <th style="text-align: right;">MATH500</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colspan="4" style="text-align: center;"><strong><em>Original Model Performance</em></strong></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">Qwen3-4B-Base</td>
+    <td style="text-align: right;">2.7</td>
+    <td style="text-align: right;">1.8</td>
+    <td style="text-align: right;">34.1</td>
+  </tr>
+  <tr>
+    <td colspan="4" style="text-align: center;"><strong><em>RL with Rule-based Verifier</em></strong></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">Math-Verify</td>
+    <td style="text-align: right;">8.9</td>
+    <td style="text-align: right;">7.2</td>
+    <td style="text-align: right;">63.1</td>
+  </tr>
+  <tr>
+    <td colspan="4" style="text-align: center;"><strong><em>RL with Model-based Verifier</em></strong></td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">Tencent-RLVR</td>
+    <td style="text-align: right;">17.4</td>
+    <td style="text-align: right;">16.2</td>
+    <td style="text-align: right;">80.5</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">Qwen3-14B</td>
+    <td style="text-align: right;">19.8</td>
+    <td style="text-align: right;">16.6</td>
+    <td style="text-align: right;">81.2</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;">Qwen2.5-32B</td>
+    <td style="text-align: right;">19.6</td>
+    <td style="text-align: right;">15.4</td>
+    <td style="text-align: right;">81.6</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;"><strong>CompassVerifier-7B (Qwen2.5)</strong></td>
+    <td style="text-align: right;">21.2</td>
+    <td style="text-align: right;"><strong>17.3</strong></td>
+    <td style="text-align: right;">82.2</td>
+  </tr>
+  <tr>
+    <td style="text-align: left;"><strong>CompassVerifier-32B (Qwen2.5)</strong></td>
+    <td style="text-align: right;"><strong>21.2</strong></td>
+    <td style="text-align: right;">17.2</td>
+    <td style="text-align: right;"><strong>83.3</strong></td>
+  </tr>
+</tbody>
+</table>
+</p>
 
 
 ## ✏️ Citation

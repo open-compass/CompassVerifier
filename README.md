@@ -266,34 +266,6 @@ for sample in test_sample:
 
 CompassVerifier performance (F1 score w/o COT)  on our new released [VerifierBench](https://huggingface.co/OpenCompass/VerifierBench):
 
-<!-- | Model                          | General Reasoning | Knowledge | Math  | Science | AVG   |
-|--------------------------------|------------------:|----------:|------:|--------:|------:|
-  General Models
-| Qwen2.5-7B-Instruct            | 51.1             | 50.7      | 30.0  | 36.6    | 42.1 |
-| Qwen2.5-32B-Instruct           | 42.2             | 46.4      | 31.6  | 48.8    | 42.2 |
-| Qwen2.5-72B-Instruct           | 49.0             | 68.5      | 37.5  | 60.5    | 53.9 |
-| Qwen3-8B                       | 61.8             | 69.4      | 51.6  | 42.9    | 56.4 |
-| Qwen3-32B                      | 70.3             | 69.5      | 54.6  | 52.8    | 61.8 |
-| Qwen3-235B                     | 73.7             | 73.1      | 53.9  | 50.0    | 62.7 |
-| GPT-4.1-2025-04-14             | 79.5             | 82.9      | 42.0  | 75.0    | 69.8 |
-| GPT-4o-2024-08-06              | 68.2             | 78.3      | 34.9  | 54.9    | 59.1 |
-| DeepSeek-V3-0324               | 76.6             | 81.2      | 54.7  | 68.5    | 70.3 |
-  Verifier Models
-| xVerify-0.5B-I                 | 78.5             | 86.2      | 42.6  | 72.6    | 70.0 |
-| xVerify-8B-I                   | 78.9             | 85.1      | 42.6  | 74.9    | 70.4 |
-| xVerify-9B-C                   | 77.0             | 81.7      | 48.0  | 69.8    | 69.1 |
-| Tencent-Qwen2.5-7B-RLVR        | 73.8             | 76.8      | 55.3  | 62.6    | 67.1 |
-| CompassVerifier-qwen2.5-3b             | 85.9             | 87.7      | 71.0  | 77.1    | 80.4 |
-| CompassVerifier-qwen2.5-7b             | 87.7             | 92.6      | 74.8  | 78.5    | 83.4 |
-| CompassVerifier-qwen2.5-32b            | 90.3             | 94.8      | 80.8  | 84.7    | 87.7 | -->
-
-<!-- CompassVerifier-qwen3-1.7B	87.1	89.4	63.0	80.2	79.9225
-CompassVerifier-qwen3-8B	86.7	90.7	75.7	79.3	83.0875
-CompassVerifier-qwen3-14B	90.3	91.4	79.1	82.9	85.9425
-CompassVerifier-qwen3-32B	89.6	92.3	79.8	83.0	86.19 -->
-
->
-
 <p align="center">
 <table>
 <thead>

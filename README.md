@@ -493,6 +493,24 @@ We also test the performance of CompassVerifier on [VerifyBench](https://arxiv.o
 > When using the VerifyBench Prompt, xVerify and Tencent-Qwen2.5-7B-RLVR will not output the corresponding judgment in the format specified by the instruction, so the scores are "-".
 
 
+## 🤖 Verifier as a Reward Model in RL
+
+To validate the efficacy of CompassVerifier as a reward model in reinforcement learning (RL), we utilize GRPO to train Qwen3-4B-Base with rule-based verifier Math-Verify, and model-based verifier as the reward model, with Open-S1 as the RL dataset. We then rigorously evaluate the reasoning capabilities with a metric of the average@32 rollout score. The results are as follows:
+
+| Model | AIME24 | AIME25 | MATH500 |
+|-------|--------|--------|---------|
+| *Original Model Performance* |
+| Qwen3-4B-Base | 2.7 | 1.8 | 34.1 |
+| *RL with Rule-based Verifier* |
+| Math-Verify | 8.9 | 7.2 | 63.1 |
+| *RL with Model-based Verifier* |
+| Tencent-RLVR | 17.4 | 16.2 | 80.5 |
+| Qwen3-14B | 19.8 | 16.6 | 81.2 |
+| Qwen2.5-32B | 19.6 | 15.4 | 81.6 |
+| CompassVerifier-7B (Qwen2.5) | 21.2 | 17.3 | 82.2 |
+| CompassVerifier-32B (Qwen2.5) | 21.2 | 17.2 | 83.3 |
+
+
 ## ✏️ Citation
 ```
 @article{CompassVerifier,

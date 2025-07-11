@@ -495,7 +495,7 @@ We also test the performance of CompassVerifier on [VerifyBench](https://arxiv.o
 
 ## 🤖 Verifier as a Reward Model in RL
 
-To validate the efficacy of CompassVerifier as a reward model in reinforcement learning (RL), we utilize GRPO to train Qwen3-4B-Base with rule-based verifier Math-Verify, and model-based verifier as the reward model, with Open-S1 as the RL dataset. We then rigorously evaluate the reasoning capabilities with a metric of the average@32 rollout score. The results are as follows:
+To validate the efficacy of CompassVerifier as a reward model in reinforcement learning (RL), we utilize GRPO to train Qwen3-4B-Base with rule-based verifier Math-Verify, and model-based verifier as the reward model, with Open-S1 as the RL dataset for two epochs. We rigorously evaluate the reasoning capabilities with a metric of the **Average@32** rollout score. The results are as follows:
 
 | Model | AIME24 | AIME25 | MATH500 |
 |-------|--------|--------|---------|

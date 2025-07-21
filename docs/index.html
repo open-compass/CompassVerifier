@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A Unified and Robust Verifier for Large Language Models">
+  <meta name="keywords" content="CompassVerifier, LLM Verifier, Large Language Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CompassVerifier: A Unified and Robust Verifier for Large Language Models</title>
+
+  <link rel="icon" href="./static/images/compass.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/open-compass/opencompass">
+            <b>OpenCompass</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="../assets/logo.png" style="width:1.25em;vertical-align: middle" alt="Logo"/>
+            <span class="compassverifier" style="vertical-align: middle">CompassVerifier</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            A Unified and Robust Verifier for Large Language Models
+          </h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Shudong Liu</a><sup style="color:#6243c0;">1</sup><sup style="color:#ed4b82;">2</sup><sup style="color:#ff9800;">*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Hongwei Liu</a><sup style="color:#6243c0;">1</sup><sup style="color:#ff9800;">*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Junnan Liu</a><sup style="color:#6243c0;">1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Linchen Xiao</a><sup style="color:#6243c0;">1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Songyang Gao</a><sup style="color:#6243c0;">1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Chengqi Lyu</a><sup style="color:#6243c0;">1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Yuzhe Gu</a><sup style="color:#6243c0;">1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Wenwei Zhang</a><sup style="color:#6243c0;">1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Derek F. Wong</a><sup style="color:#ed4b82">2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Songyang Zhang</a><sup style="color:#6243c0;">1</sup><sup style="color:#27ae60;">†</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Kai Chen</a><sup style="color:#6243c0;">1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup style="color:#6243c0;">1</sup>Shanghai AI Laboratory,</span>
+            <span class="author-block"><sup style="color:#ed4b82">2</sup>University of Macau</span>
+            <br>
+            <span class="author-block"><sup style="color:#ff9800;">*</sup>Equal Contribution,</span>
+            <span class="author-block"><sup style="color:#27ae60;">†</sup>Project Lead</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/open-compass/CompassVerifier"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/OpenCompass/VerifierBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <!-- Model Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/opencompass/compassverifier-686e5a25e8672e603b17c666"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🚀</p>
+                  </span>
+                  <span>Models</span>
+                </a>
+              </span>
+              <!-- Leaderboard Link. -->
+              <span class="link-block">
+                <a href="#leaderboard"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🏆</p>
+                  </span>
+                  <span>Leaderboard</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p>
+          <b>CompassVerifier</b> is an accurate and robust lightweight verifier model for evaluation and outcome reward. It demonstrates multi-domain competency spanning math, knowledge, and diverse reasoning tasks, with the capability to process various answer types, including multi-subproblems, formulas, and sequence answers, while effectively identifying abnormal/invalid responses.
+          </p>
+          <p>
+            We introduce <b>VerifierBench</b> benchmark comprising question and model outputs collected from multiple data sources from about <b>1 million predictions</b> from various common-used models and datasets, labeled by human experts. Our verifier models are available in three sizes: <b>CompassVerifier-3B</b>, <b>CompassVerifier-7B</b>, and <b>CompassVerifier-32B</b>.
+          </p>
+          <p>
+            The verifier outputs simple judgment results: <b>A (correct)</b>, <b>B (incorrect)</b>, and <b>C (quality problems)</b>. We also provide a COT mode that gives detailed analysis for complex problems. CompassVerifier achieves state-of-the-art performance across multiple domains, particularly excelling in mathematical reasoning.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Model Comparison Figure -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <img src="../assets/model_compare.png" alt="Model Comparison" width="80%"/>
+        <p class="mt-3">
+          Performance comparison of CompassVerifier with other models across different domains on VerifierBench.
+        </p>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard">Leaderboard on VerifierBench</h2>
+        <div class="content">
+          <p class="mt-3">F1 scores on <b>VerifierBench</b> across different domains.
+          </p>
+
+          <table class="js-sort-table" id="results">
+            <tr>
+                <td class="js-sort-number"><strong>#</strong></td>
+                <td class="js-sort-number"><strong>Model</strong></td>
+                <td class="js-sort-number"><strong>Type</strong></td>
+                <td class="js-sort-number"><strong><u>AVG</u></strong></td>
+                <td class="js-sort-number"><strong>General Reasoning</strong></td>
+                <td class="js-sort-number"><strong>Knowledge</strong></td>
+                <td class="js-sort-number"><strong>Math</strong></td>
+                <td class="js-sort-number"><strong>Science</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><b class="best-score-text">CompassVerifier-32B 🥇</b></td>
+              <td>Verifier</td>
+              <td><b class="best-score-text">87.7</b></td>
+              <td><b class="best-score-text">90.3</b></td>
+              <td><b class="best-score-text">94.8</b></td>
+              <td><b class="best-score-text">80.8</b></td>
+              <td><b class="best-score-text">84.7</b></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><b class="best-score-text">CompassVerifier-7B 🥈</b></td>
+              <td>Verifier</td>
+              <td><b class="best-score-text">83.4</b></td>
+              <td>87.7</td>
+              <td>92.6</td>
+              <td>74.8</td>
+              <td>78.5</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><b class="best-score-text">CompassVerifier-3B 🥉</b></td>
+              <td>Verifier</td>
+              <td><b class="best-score-text">80.4</b></td>
+              <td>85.9</td>
+              <td>87.7</td>
+              <td>71.0</td>
+              <td>77.1</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><b>xVerify-8B-I</b></td>
+              <td>Verifier</td>
+              <td><b>70.4</b></td>
+              <td>78.9</td>
+              <td>85.1</td>
+              <td>42.6</td>
+              <td>74.9</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><b>DeepSeek-V3-0324</b></td>
+              <td>LLM</td>
+              <td><b>70.3</b></td>
+              <td>76.6</td>
+              <td>81.2</td>
+              <td>54.7</td>
+              <td>68.5</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><b>xVerify-0.5B-I</b></td>
+              <td>Verifier</td>
+              <td><b>70.0</b></td>
+              <td>78.5</td>
+              <td>86.2</td>
+              <td>42.6</td>
+              <td>72.6</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td><b>GPT-4.1-2025-04-14</b></td>
+              <td>LLM</td>
+              <td><b>69.8</b></td>
+              <td>79.5</td>
+              <td>82.9</td>
+              <td>42.0</td>
+              <td>75.0</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><b>xVerify-9B-C</b></td>
+              <td>Verifier</td>
+              <td><b>69.1</b></td>
+              <td>77.0</td>
+              <td>81.7</td>
+              <td>48.0</td>
+              <td>69.8</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><b>Tencent-Qwen2.5-7B-RLVR</b></td>
+              <td>Verifier</td>
+              <td><b>67.1</b></td>
+              <td>73.8</td>
+              <td>76.8</td>
+              <td>55.3</td>
+              <td>62.6</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><b>Qwen3-235B</b></td>
+              <td>LLM</td>
+              <td><b>62.7</b></td>
+              <td>73.7</td>
+              <td>73.1</td>
+              <td>53.9</td>
+              <td>50.0</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td><b>Qwen3-32B</b></td>
+              <td>LLM</td>
+              <td><b>61.8</b></td>
+              <td>70.3</td>
+              <td>69.5</td>
+              <td>54.6</td>
+              <td>52.8</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td><b>GPT-4o-2024-08-06</b></td>
+              <td>LLM</td>
+              <td><b>59.1</b></td>
+              <td>68.2</td>
+              <td>78.3</td>
+              <td>34.9</td>
+              <td>54.9</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td><b>Qwen3-8B</b></td>
+              <td>LLM</td>
+              <td><b>56.4</b></td>
+              <td>61.8</td>
+              <td>69.4</td>
+              <td>51.6</td>
+              <td>42.9</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td><b>Qwen2.5-72B-Instruct</b></td>
+              <td>LLM</td>
+              <td><b>53.9</b></td>
+              <td>49.0</td>
+              <td>68.5</td>
+              <td>37.5</td>
+              <td>60.5</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td><b>Qwen2.5-32B-Instruct</b></td>
+              <td>LLM</td>
+              <td><b>42.2</b></td>
+              <td>42.2</td>
+              <td>46.4</td>
+              <td>31.6</td>
+              <td>48.8</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td><b>Qwen2.5-7B-Instruct</b></td>
+              <td>LLM</td>
+              <td><b>42.1</b></td>
+              <td>51.1</td>
+              <td>50.7</td>
+              <td>30.0</td>
+              <td>36.6</td>
+            </tr>
+        </table>
+
+          <br>
+          <p><b>Type:</b> <b>Verifier:</b> Specialized verifier model, <b>LLM:</b> General large language model.</p>
+          <p>🚨 To submit your results to the leaderboard, please contact us at <a href="mailto:liushudong@pjlab.org.cn">liushudong@pjlab.org.cn</a> and <a href="mailto:liuhongwei@pjlab.org.cn">liuhongwei@pjlab.org.cn</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@article{CompassVerifier,
+  title={{CompassVerifier: A Unified and Robust Verifier for Large Language Models}}, 
+  author={Shudong Liu and Hongwei Liu and Junnan Liu and Linchen Xiao and Songyang Gao and Chengqi Lyu and Yuzhe Gu and Wenwei Zhang and Derek F. Wong and Songyang Zhang and Kai Chen},
+  year={2025},
+}</code></pre>
+  </div>
+</section>
+
+<!-- <section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.shlab.org.cn/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/shanghai_ai_lab.png">
+    </a>
+    <a href="https://www.um.edu.mo/" target="blank" class="ext-link">
+        <img class="center-block org-banner" src="static/images/um.png">
+    </a>
+  </div>
+</section> -->
+
+<footer class="footer">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html> 

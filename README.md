@@ -40,7 +40,7 @@ We release the best performing model and dataset from our experiments. Pick a su
 
 | Dataset | HF Path                                                |
 |------|---------------|
-| VerifierBench  | [🤗 OpenCompass/VerifierBench](https://huggingface.co/OpenCompass/VerifierBench) |
+| VerifierBench  | [🤗 OpenCompass/VerifierBench](https://huggingface.co/opencompass/VerifierBench) |
 
 </div>
 
@@ -48,9 +48,9 @@ We release the best performing model and dataset from our experiments. Pick a su
 
 | Model | HF Path                                               |
 |------|---------------|
-| CompassVerifier-3B  | [🤗 OpenCompass/CompassVerifier-3B](https://huggingface.co/OpenCompass/CompassVerifier-3B) |
-| CompassVerifier-7B  | [🤗 OpenCompass/CompassVerifier-7B](https://huggingface.co/OpenCompass/CompassVerifier-7B) |
-| CompassVerifier-32B  | [🤗 OpenCompass/CompassVerifier-32B](https://huggingface.co/OpenCompass/CompassVerifier-32B) |
+| CompassVerifier-3B  | [🤗 OpenCompass/CompassVerifier-3B](https://huggingface.co/opencompass/CompassVerifier-3B) |
+| CompassVerifier-7B  | [🤗 OpenCompass/CompassVerifier-7B](https://huggingface.co/opencompass/CompassVerifier-7B) |
+| CompassVerifier-32B  | [🤗 OpenCompass/CompassVerifier-32B](https://huggingface.co/openCompass/compassVerifier-32B) |
 
 </div>
 

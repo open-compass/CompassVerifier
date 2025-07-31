@@ -40,7 +40,7 @@ We release the best performing model and dataset from our experiments. Pick a su
 
 | Dataset | HF Path                                                |
 |------|---------------|
-| VerifierBench  | [🤗 OpenCompass/VerifierBench](https://huggingface.co/opencompass/VerifierBench) |
+| VerifierBench  | [🤗 OpenCompass/VerifierBench](https://huggingface.co/datasets/opencompass/VerifierBench) |
 
 </div>
 

@@ -18,8 +18,8 @@
   <a href="https://huggingface.co/datasets/opencompass/VerifierBench" target="_blank" style="margin: 2px;">
       <img alt="Hugging Face Dataset" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-ff9800?color=ff9800&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/" style="margin: 2px;">
-      <img alt="License" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-f5de53?color=f5de53&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
+  <a href="https://www.apache.org/licenses/LICENSE-2.0" style="margin: 2px;">
+      <img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?color=blue&logo=apache&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
 </div>
 
@@ -30,7 +30,7 @@
 
 
 <p align="center">
-  <img src="https://cdn-uploads.huggingface.co/production/uploads/614ffea450eec00bf3c23652/gezsWZn0CxCc423gW5UMO.png" alt="Test Set Results" width="600" height="400">
+  <img src="assets/model_performance.png" alt="Test Set Results" width="600" height="400">
 </p>
 
 ## Get the model and dataset from 🤗
@@ -389,44 +389,8 @@ CompassVerifier performance (F1 score w/o COT)  on our new released [VerifierBen
     <td style="text-align: right;">62.6</td>
     <td style="text-align: right;">67.1</td>
   </tr>
-
   <tr>
-    <td colspan="6" style="text-align: center;"><strong><em>CompassVerifier (Qwen3)</em></strong></td>
-  </tr>
-  <tr>
-    <td style="text-align: left;">CompassVerifier-1.7B</td>
-    <td style="text-align: right;">87.1</td>
-    <td style="text-align: right;">89.4</td>
-    <td style="text-align: right;">63.0</td>
-    <td style="text-align: right;">80.2</td>
-    <td style="text-align: right;">80.0</td>
-  </tr>
-  <tr>
-    <td style="text-align: left;">CompassVerifier-8B</td>
-    <td style="text-align: right;">86.7</td>
-    <td style="text-align: right;">90.7</td>
-    <td style="text-align: right;">75.7</td>
-    <td style="text-align: right;">79.3</td>
-    <td style="text-align: right;">83.1</td>
-  </tr>
-  <tr>
-    <td style="text-align: left;">CompassVerifier-14B</td>
-    <td style="text-align: right;">90.3</td>
-    <td style="text-align: right;">91.4</td>
-    <td style="text-align: right;">79.1</td>
-    <td style="text-align: right;">82.9</td>
-    <td style="text-align: right;">85.9</td>
-  </tr>
-  <tr>
-    <td style="text-align: left;">CompassVerifier-32B</td>
-    <td style="text-align: right;">89.6</td>
-    <td style="text-align: right;">92.3</td>
-    <td style="text-align: right;">79.8</td>
-    <td style="text-align: right;">83.0</td>
-    <td style="text-align: right;">86.2</td>
-  </tr>
-  <tr>
-    <td colspan="6" style="text-align: center;"><strong><em>CompassVerifier (Qwen2.5)</em></strong></td>
+    <td colspan="6" style="text-align: center;"><strong><em>CompassVerifier</em></strong></td>
   </tr>
   <tr>
     <td style="text-align: left;">CompassVerifier-3B</td>
@@ -534,24 +498,8 @@ We also test the performance of CompassVerifier on [VerifyBench](https://arxiv.o
     <td style="text-align: right;">-</td>
   </tr>
   <tr>
-    <td colspan="5" style="text-align: center;"><strong><em>CompassVerifier (Qwen3)</em></strong></td>
-  </tr>
   <tr>
-    <td style="text-align: left;">CompassVerifier-1.7B</td>
-    <td style="text-align: right;">80.1</td>
-    <td style="text-align: right;">69.3</td>
-    <td style="text-align: right;">72.9</td>
-    <td style="text-align: right;">61.0</td>
-  </tr>
-  <tr>
-    <td style="text-align: left;">CompassVerifier-8B</td>
-    <td style="text-align: right;">84.5</td>
-    <td style="text-align: right;">72.7</td>
-    <td style="text-align: right;">79.2</td>
-    <td style="text-align: right;">55.4</td>
-  </tr>
-  <tr>
-    <td colspan="5" style="text-align: center;"><strong><em>CompassVerifier (Qwen2.5)</em></strong></td>
+    <td colspan="5" style="text-align: center;"><strong><em>CompassVerifier</em></strong></td>
   </tr>
   <tr>
     <td style="text-align: left;">CompassVerifier-3B</td>

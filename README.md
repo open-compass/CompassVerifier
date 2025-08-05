@@ -1,5 +1,5 @@
 <h1 align="center">
-    CompassVerifier: A Unified and Robust Verifier for Large Language Models
+    CompassVerifier: A Unified and Robust Verifier for LLMs Evaluation and Outcome Reward
 </h1>
 
 <div align="center" style="line-height: 1;">

@@ -52,6 +52,14 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
+.publication-subtitle {
+    font-family: 'Google Sans', sans-serif;
+    max-width: 100%;
+    word-wrap: normal;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
 .publication-authors {
     font-family: 'Google Sans', sans-serif;
 }
@@ -72,7 +80,8 @@ body {
 }
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+   color: #008AD7 !important;
+   font-size: 1.05em;
 }
 
 .publication-authors a:hover {

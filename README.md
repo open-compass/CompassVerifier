@@ -9,7 +9,7 @@
   <a href="https://open-compass.github.io/CompassVerifier" target="_blank" style="margin: 2px;">
     <img alt="CompassVerifier Homepage" src="https://img.shields.io/badge/CompassVerifier-Website-orange?color=ff6b35&logo=web&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
-  <a href="" target="_blank" style="margin: 2px;">
+  <a href="https://arxiv.org/abs/2508.03686" target="_blank" style="margin: 2px;">
     <img alt="Technical Report" src="https://img.shields.io/badge/Paper-Report-brightgreen?logo=arxiv&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
   <a href="https://huggingface.co/collections/opencompass/compassverifier-686e5a25e8672e603b17c666" target="_blank" style="margin: 2px;">
@@ -604,9 +604,10 @@ To validate the efficacy of CompassVerifier as a reward model in reinforcement l
 
 ## ✏️ Citation
 ```
-@article{CompassVerifier,
-      title={{CompassVerifier: A Unified and Robust Verifier for Large Language Models}}, 
-      author={Shudong Liu and Hongwei Liu and Junnan Liu and Linchen Xiao and Songyang Gao and Chengqi Lyu and Yuzhe Gu and Wenwei Zhang and Derek F. Wong and Songyang Zhang and Kai Chen},
-      year={2025},
+@article{liu2025compassverifier,
+  title={CompassVerifier: A Unified and Robust Verifier for LLMs Evaluation and Outcome Reward},
+  author={Liu, Shudong and Liu, Hongwei and Liu, Junnan and Xiao, Linchen and Gao, Songyang and Lyu, Chengqi and Gu, Yuzhe and Zhang, Wenwei and Wong, Derek F and Zhang, Songyang and Chen, Kai},
+  journal={arXiv preprint arXiv:2508.03686},
+  year={2025}
 }
 ```
